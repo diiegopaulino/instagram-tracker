@@ -20,7 +20,7 @@ const ChangesTab = ({
 }: ChangesTabProps) => {
   if (!hasData) {
     return (
-      <Alert variant="warning" className="bg-yellow-50 border-yellow-200">
+      <Alert variant="default" className="bg-yellow-50 border-yellow-200">
         <AlertTriangle className="h-4 w-4 text-yellow-600" />
         <AlertDescription>
           Envie os arquivos para visualizar as mudanças.
@@ -31,7 +31,7 @@ const ChangesTab = ({
 
   if (!hasHistory) {
     return (
-      <Alert variant="warning" className="bg-yellow-50 border-yellow-200">
+      <Alert variant="default" className="bg-yellow-50 border-yellow-200">
         <AlertTriangle className="h-4 w-4 text-yellow-600" />
         <AlertDescription>
           Envie os arquivos de histórico para ver as mudanças.
@@ -76,7 +76,7 @@ const ChangesTab = ({
       )}
 
       {newFollowers.length === 0 && unfollowers.length === 0 && unfollowed.length === 0 && (
-        <Alert className="bg-blue-50 border-blue-200">
+        <Alert>
           <AlertDescription>
             Não foram detectadas mudanças desde o último histórico.
           </AlertDescription>

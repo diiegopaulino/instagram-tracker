@@ -17,7 +17,7 @@ interface NonFollowersTabProps {
 const NonFollowersTab = ({ notFollowingBack, hasData }: NonFollowersTabProps) => {
   if (!hasData) {
     return (
-      <Alert variant="warning" className="bg-yellow-50 border-yellow-200">
+      <Alert variant="default" className="bg-yellow-50 border-yellow-200">
         <AlertTriangle className="h-4 w-4 text-yellow-600" />
         <AlertDescription>
           Envie os arquivos para visualizar os usuários que não te seguem de volta.
@@ -43,7 +43,7 @@ const NonFollowersTab = ({ notFollowingBack, hasData }: NonFollowersTabProps) =>
               ))}
             </div>
           ) : (
-            <Alert variant="success" className="bg-green-50 border-green-200">
+            <Alert>
               <AlertDescription>
                 🎉 Todos te seguem de volta!
               </AlertDescription>
