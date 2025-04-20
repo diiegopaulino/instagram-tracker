@@ -16,9 +16,11 @@ interface FileInputProps {
 const FileInput = ({ id, label, fileName, required = false, onChange, className }: FileInputProps) => {
   return (
     <div className={cn("mb-4", className)}>
-      <Label htmlFor={id} className="mb-1 flex items-center gap-2 h-5">
-        {label} <code className="text-xs bg-muted px-1 py-0.5 rounded">{fileName}</code>
-      </Label>
+      <div className="flex items-center gap-2">
+        <Label htmlFor={id} className="flex items-center gap-2 min-h-[40px]">
+          {label} <code className="text-xs bg-muted px-1 py-0.5 rounded">{fileName}</code>
+        </Label>
+      </div>
       <Input
         id={id}
         type="file"
