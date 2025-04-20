@@ -1,73 +1,52 @@
-# Welcome to your Lovable project
+# Instagram Tracker 📉
 
-## Project info
+Um visualizador moderno de dados exportados do Instagram, desenvolvido com [Lovable.dev](https://lovable.dev), Tailwind CSS e React. A aplicação permite que você faça upload de arquivos JSON exportados da plataforma e visualize quem deixou de seguir você, quem você segue e não te segue de volta, além de outras estatísticas personalizadas.
 
-**URL**: https://lovable.dev/projects/f47335e2-c123-4a1a-8438-e39bf72d48dc
+## 🚀 Demonstração
 
-## How can I edit this code?
+Acesse o projeto online:  
+👉 [Ver Projeto no Lovable](https://lovable.dev/projects/f47335e2-c123-4a1a-8438-e39bf72d48dc)
 
-There are several ways of editing your application.
+## 📦 Estrutura do Projeto
 
-**Use Lovable**
+- **src/components**: Contém componentes reutilizáveis como `FileInput`, `Header`, entre outros.
+- **src/pages**: Reúne as páginas principais da aplicação.
+- **public**: Inclui ícones, imagens e outros assets.
+- **App.tsx**: Define a estrutura principal da aplicação.
+- **index.html**: Arquivo base para o HTML da aplicação.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/f47335e2-c123-4a1a-8438-e39bf72d48dc) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🧠 Funcionalidades
 
-**Use your preferred IDE**
+- Upload dos arquivos de seguidores e seguidos do Instagram
+- Detecção de não-seguidores e comparação entre listas
+- Relatório com visual moderno
+- Interface clara e responsiva
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🛠️ Tecnologias Usadas
 
-Follow these steps:
+- [React](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [Lovable.dev](https://lovable.dev/)
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## ▶️ Como rodar localmente
 
-# Step 3: Install the necessary dependencies.
-npm i
+Para rodar localmente, siga os passos abaixo:
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+```bash
+# Clone o repositório
+git clone <URL_DO_SEU_REPOSITORIO>
+cd instagram-tracker
+
+# Instale as dependências
+npm install
+
+# Inicie o servidor de desenvolvimento
 npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/f47335e2-c123-4a1a-8438-e39bf72d48dc) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
