@@ -5,7 +5,7 @@ Um visualizador moderno de dados exportados do Instagram, desenvolvido com [Lova
 ## 🚀 Demonstração
 
 Acesse o projeto online:  
-👉 [Ver Projeto no Lovable](https://lovable.dev/projects/f47335e2-c123-4a1a-8438-e39bf72d48dc)
+👉 [Ver Projeto no Vercel](https://instagram-tracker-main.vercel.app/)
 
 ## 📦 Estrutura do Projeto
 
