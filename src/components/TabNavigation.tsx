@@ -33,11 +33,11 @@ const TabNavigation = ({
   const [currentTab, setCurrentTab] = useState("stats");
 
   const handleSaveFollowers = () => {
-    downloadFile(followers, "seguidores_atual.json");
+    downloadFile(followers, "historico_seguidores.json");
   };
 
   const handleSaveFollowing = () => {
-    downloadFile(following, "seguindo_atual.json");
+    downloadFile(following, "historico_seguindo.json");
   };
 
   const handleSaveReport = () => {
@@ -62,22 +62,27 @@ const TabNavigation = ({
   };
 
   return (
-    <Tabs defaultValue="stats" value={currentTab} onValueChange={setCurrentTab} className="w-full mt-6">
-      <TabsList className="grid grid-cols-4 mb-6">
-        <TabsTrigger value="stats" className="flex items-center gap-1">
-          <BarChart3 size={16} />
+    <Tabs 
+      defaultValue="stats" 
+      value={currentTab} 
+      onValueChange={setCurrentTab} 
+      className="w-full mt-6 max-w-full overflow-hidden"
+    >
+      <TabsList className="grid w-full grid-cols-4 mb-6">
+        <TabsTrigger value="stats" className="flex items-center justify-center gap-1 px-2 sm:px-4">
+          <BarChart3 className="h-4 w-4 sm:h-5 sm:w-5" />
           <span className="hidden sm:inline">Estatísticas</span>
         </TabsTrigger>
-        <TabsTrigger value="non-followers" className="flex items-center gap-1">
-          <UserX size={16} />
+        <TabsTrigger value="non-followers" className="flex items-center justify-center gap-1 px-2 sm:px-4">
+          <UserX className="h-4 w-4 sm:h-5 sm:w-5" />
           <span className="hidden sm:inline">Não te seguem</span>
         </TabsTrigger>
-        <TabsTrigger value="changes" className="flex items-center gap-1">
-          <RefreshCw size={16} />
+        <TabsTrigger value="changes" className="flex items-center justify-center gap-1 px-2 sm:px-4">
+          <RefreshCw className="h-4 w-4 sm:h-5 sm:w-5" />
           <span className="hidden sm:inline">Mudanças</span>
         </TabsTrigger>
-        <TabsTrigger value="help" className="flex items-center gap-1">
-          <HelpCircle size={16} />
+        <TabsTrigger value="help" className="flex items-center justify-center gap-1 px-2 sm:px-4">
+          <HelpCircle className="h-4 w-4 sm:h-5 sm:w-5" />
           <span className="hidden sm:inline">Instruções</span>
         </TabsTrigger>
       </TabsList>
