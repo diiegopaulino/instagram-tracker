@@ -10,15 +10,10 @@ interface FileInputProps {
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
   className?: string;
 }
-const FileInput = ({
-  id,
-  label,
-  fileName,
-  required = false,
-  onChange,
-  className
-}: FileInputProps) => {
-  return <div className={cn("mb-4", className)}>
+
+const FileInput = ({ id, label, fileName, required = false, onChange, className }: FileInputProps) => {
+  return (
+    <div className={cn("mb-4", className)}>
       <div className="mb-4 flex flex-col items-center">
         <Label htmlFor={id} className="flex items-center gap-2 min-h-[40px]">
           {label} <code className="text-xs bg-muted px-1 py-0.5 rounded">{fileName}</code>
