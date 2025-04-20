@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
@@ -194,14 +193,14 @@ ${notFollowingBack.map(u => `- [${u}](https://instagram.com/${u})`).join('\n')}`
           <FileInput
             id="historyFollowers"
             label="📂 Histórico anterior"
-            fileName="seguidores_atual.json"
+            fileName="historico_seguidores.json"
             onChange={(e) => setHistoryFollowersFile(e.target.files?.[0] || null)}
           />
           
           <FileInput
             id="historyFollowing"
             label="📂 Histórico anterior de seguindo"
-            fileName="seguindo_anterior.json"
+            fileName="historico_seguindo.json"
             onChange={(e) => setHistoryFollowingFile(e.target.files?.[0] || null)}
           />
         </div>

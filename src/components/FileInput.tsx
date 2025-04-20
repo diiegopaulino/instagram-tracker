@@ -16,7 +16,7 @@ interface FileInputProps {
 const FileInput = ({ id, label, fileName, required = false, onChange, className }: FileInputProps) => {
   return (
     <div className={cn("mb-4", className)}>
-      <Label htmlFor={id} className="mb-1 flex items-center gap-2">
+      <Label htmlFor={id} className="mb-1 flex items-center gap-2 h-5">
         {label} <code className="text-xs bg-muted px-1 py-0.5 rounded">{fileName}</code>
       </Label>
       <Input
@@ -25,7 +25,7 @@ const FileInput = ({ id, label, fileName, required = false, onChange, className 
         accept="application/json"
         required={required}
         onChange={onChange}
-        className="cursor-pointer file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-primary file:text-white hover:file:bg-primary/90"
+        className="cursor-pointer file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-primary file:text-white hover:file:bg-primary/90 h-10 flex items-center"
       />
     </div>
   );

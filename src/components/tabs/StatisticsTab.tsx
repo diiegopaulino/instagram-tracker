@@ -27,7 +27,7 @@ const StatisticsTab = ({
     return (
       <Alert variant="default" className="bg-yellow-50 border-yellow-200">
         <AlertTriangle className="h-4 w-4 text-yellow-600" />
-        <AlertDescription>
+        <AlertDescription className="my-auto">
           Envie os arquivos para visualizar as estatísticas.
         </AlertDescription>
       </Alert>
