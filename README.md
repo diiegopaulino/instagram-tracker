@@ -15,7 +15,6 @@ Acesse o projeto online:
 - **App.tsx**: Define a estrutura principal da aplicação.
 - **index.html**: Arquivo base para o HTML da aplicação.
 
----
 
 ## 🧠 Funcionalidades
 
@@ -24,7 +23,6 @@ Acesse o projeto online:
 - Relatório com visual moderno
 - Interface clara e responsiva
 
----
 
 ## 🛠️ Tecnologias Usadas
 
@@ -34,7 +32,6 @@ Acesse o projeto online:
 - [Vite](https://vitejs.dev/)
 - [Lovable.dev](https://lovable.dev/)
 
----
 
 ## ▶️ Como rodar localmente
 
