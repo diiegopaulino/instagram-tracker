@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { BarChart3, UserX, RefreshCw, HelpCircle } from 'lucide-react';
@@ -6,6 +5,7 @@ import StatisticsTab from './tabs/StatisticsTab';
 import NonFollowersTab from './tabs/NonFollowersTab';
 import ChangesTab from './tabs/ChangesTab';
 import HelpTab from './tabs/HelpTab';
+import { downloadFile, generateMarkdownReport } from '@/utils/fileUtils';
 
 export interface TabNavigationProps {
   followers: string[];
@@ -17,9 +17,6 @@ export interface TabNavigationProps {
   unfollowers: string[];
   unfollowed: string[];
   hasData: boolean;
-  handleSaveFollowers: () => void;
-  handleSaveFollowing: () => void;
-  handleSaveReport: () => void;
 }
 
 const TabNavigation = ({
@@ -31,12 +28,38 @@ const TabNavigation = ({
   newFollowers,
   unfollowers,
   unfollowed,
-  hasData,
-  handleSaveFollowers,
-  handleSaveFollowing,
-  handleSaveReport
+  hasData
 }: TabNavigationProps) => {
   const [currentTab, setCurrentTab] = useState("stats");
+
+  const handleSaveFollowers = () => {
+    downloadFile(followers, "seguidores_atual.json");
+  };
+
+  const handleSaveFollowing = () => {
+    downloadFile(following, "seguindo_atual.json");
+  };
+
+  const handleSaveReport = () => {
+    const markdownReport = generateMarkdownReport(
+      followers,
+      following,
+      notFollowingBack,
+      newFollowers,
+      unfollowers,
+      unfollowed,
+      historyFollowers,
+      historyFollowing
+    );
+
+    const blob = new Blob([markdownReport], { type: 'text/markdown' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = "relatorio_instagram.md";
+    a.click();
+    URL.revokeObjectURL(url);
+  };
 
   return (
     <Tabs defaultValue="stats" value={currentTab} onValueChange={setCurrentTab} className="w-full mt-6">
