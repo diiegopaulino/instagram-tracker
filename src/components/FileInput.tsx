@@ -20,7 +20,7 @@ const FileInput = ({
 }: FileInputProps) => {
   return <div className={cn("mb-4", className)}>
       <div className="mb-4 flex flex-col items-center">
-        <Label htmlFor={id} className="flex items-left gap-2 min-h-[40px]">
+        <Label htmlFor={id} className="flex items-center gap-2 min-h-[40px]">
           {label} <code className="text-xs bg-muted px-1 py-0.5 rounded">{fileName}</code>
         </Label>
       </div>
