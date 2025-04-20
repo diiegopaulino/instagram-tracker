@@ -2,13 +2,11 @@ import { Card, CardContent } from "@/components/ui/card";
 const HelpTab = () => {
   return <Card>
       <CardContent className="p-6">
-        <h2 className="text-xl font-semibold mb-3">Instruções</h2>
+        <h2 className="text-xl font-semibold mb-3">📋 Instruções</h2>
         
-        <h5 className="text-lg font-semibold mb-2">Como obter seus dados do Instagram</h5>
+        <h5 className="text-lg font-semibold mb-2">💡 Como obter seus dados do Instagram</h5>
         
-        <p className="mb-4 text-muted-foreground">
-          Todo o processamento acontece localmente no seu navegador. Nenhum dado é enviado ou armazenado.
-        </p>
+        <p className="mb-4 text-muted-foreground">🔒 Todo o processamento acontece localmente no seu navegador. Nenhum dado é enviado ou armazenado.</p>
         
         <ol className="list-decimal pl-5 space-y-2">
           <li>Acesse o Instagram pelo app do seu celular.</li>
