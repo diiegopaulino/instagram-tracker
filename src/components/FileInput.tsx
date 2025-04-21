@@ -25,7 +25,7 @@ const FileInput = ({ id, label, fileName, required = false, onChange, className 
         accept="application/json"
         required={required}
         onChange={onChange}
-        className="cursor-pointer file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-primary file:text-white hover:file:bg-primary/90 h-10 flex items-center"
+        className="cursor-pointer file:mr-4 file:px-4 file:rounded-lg file:border-0 file:bg-primary file:text-white hover:file:bg-primary/90 file:h-full flex items-center"
       />
     </div>
   );
